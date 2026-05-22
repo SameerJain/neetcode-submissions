@@ -1,0 +1,26 @@
+from typing import List
+
+
+def in_bounds(grid: List[List[int]], r: int, c: int) -> bool:
+    row_count = -1
+    col_count = -1
+    for i in grid:
+        row_count += 1
+
+        for j in i:
+            continue 
+        col_count += 1
+        if col_count == c and row_count == r:
+            return True
+
+    return False
+
+
+# do not modify below this line
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 0, 0))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2, 2))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1, 1))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 4, 3))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 4))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, -1))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], -1, 3))
